@@ -23,6 +23,7 @@ export default class LevelsScreen extends Component {
           well-defined steps that can be followed as a procedure.
         </BebasText>
         <ScrollView style={styles.list}>
+          <BebasText style={styles.text4}>Concealment Ciphers</BebasText>
           <AwesomeButton
             type="primary"
             backgroundColor="#e5e5e5"
@@ -30,8 +31,9 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
               this.props.navigation.push('Home');
-            }} style={styles.rect}><BebasText style={styles.text2}>Autokey</BebasText>
+            }} style={styles.rect}><BebasText style={styles.text2}>Null</BebasText>
           </AwesomeButton>
+          <BebasText style={styles.text4}>Substitution Ciphers - Monoalphabetic</BebasText>
           <AwesomeButton
             type="primary"
             backgroundColor="#e5e5e5"
@@ -39,7 +41,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
               this.props.navigation.push('Home');
-            }} style={styles.rect}><BebasText style={styles.text2}>Baconian</BebasText>
+            }} style={styles.rect}><BebasText style={styles.text2}>Atbash</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -48,7 +50,62 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Bazeries</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>ROT13</BebasText>
+          </AwesomeButton>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Caesar</BebasText>
+          </AwesomeButton>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Affine</BebasText>
+          </AwesomeButton>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Baconian</BebasText>
+          </AwesomeButton>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Polybius Square</BebasText>
+          </AwesomeButton>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Simple</BebasText>
+          </AwesomeButton>
+          <BebasText style={styles.text4}>Substitution Ciphers - Polyalphabetic</BebasText>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Autokey</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -66,7 +123,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Bifid</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Nihilist</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -75,367 +132,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Cadenus</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Checkerboard</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Complete Columnar Transposition</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Condi</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Conjugated Matrix Bifid</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Digrafid</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Foursquare</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Fractionated Morse</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Grandpré</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Grille</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Gromark</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Gronsfeld</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Headlines</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Homophonic</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Incomplete Columnar</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Interrupted Key</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Key Phrase</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Monome-Dinome</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Morbit</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Myszkowski</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Nicodemus</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Nihilist Substitution</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Nihilist Transposition</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Null</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Numbered Key</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Periodic Gromark</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Phillips</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Phillips-Rc</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Playfair</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Pollux</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Porta</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Portax</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Progressive Key</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Quagmire I</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Quagmire Ii</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Quagmire Iii</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Quagmire Iv</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Ragbaby</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Railfence</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Redefence</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Route Transposition</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Port</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -453,7 +150,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Seriated Playfair</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Vingère/Gronsfeld</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -462,7 +159,17 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Slidefair</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Enigma</BebasText>
+          </AwesomeButton>
+          <BebasText style={styles.text4}>Substitution Ciphers - Polygraphic</BebasText>
+          <AwesomeButton
+            type="primary"
+            backgroundColor="#e5e5e5"
+            backgroundDarker="#C0C0C0"
+            textColor="#00000"
+            onPress={() => {
+             this.props.navigation.push('Home');
+           }} style={styles.rect}><BebasText style={styles.text2}>Two-Square</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -471,7 +178,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Swagman</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Hill</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -480,8 +187,9 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Syllabary</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Playfair</BebasText>
           </AwesomeButton>
+          <BebasText style={styles.text4}>Transposition Ciphers</BebasText>
           <AwesomeButton
             type="primary"
             backgroundColor="#e5e5e5"
@@ -489,7 +197,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Tridigital</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Rail-Fence</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -507,7 +215,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Tri-Square</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Columnar</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -516,7 +224,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Twin Bifid</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Route</BebasText>
           </AwesomeButton>
           <AwesomeButton
             type="primary"
@@ -525,34 +233,7 @@ export default class LevelsScreen extends Component {
             textColor="#00000"
             onPress={() => {
              this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Twin Trifid</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Two-Square</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Variant</BebasText>
-          </AwesomeButton>
-          <AwesomeButton
-            type="primary"
-            backgroundColor="#e5e5e5"
-            backgroundDarker="#C0C0C0"
-            textColor="#00000"
-            onPress={() => {
-             this.props.navigation.push('Home');
-           }} style={styles.rect}><BebasText style={styles.text2}>Vigenère</BebasText>
+           }} style={styles.rect}><BebasText style={styles.text2}>Bifid</BebasText>
           </AwesomeButton>
         </ScrollView>
       </View>
