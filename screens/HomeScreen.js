@@ -29,6 +29,7 @@ export default class HomeScreen extends Component {
   }
 }
 
+// Styles for HomeScreen.js
 const styles = StyleSheet.create({
   container: {
     shadowColor: 'transparent',
