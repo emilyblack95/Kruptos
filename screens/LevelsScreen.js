@@ -30,8 +30,15 @@ export default class LevelsScreen extends Component {
             backgroundDarker="#C0C0C0"
             textColor="#00000"
             onPress={() => {
-              this.props.navigation.push('Home');
-            }} style={styles.rect}><BebasText style={styles.text2}>Null</BebasText>
+              /* Parameter passing */
+              this.props.navigation.navigate('Item', {
+                name: 'Null Cipher',
+                info: 'The null cipher is pretty neat. More info goes here later.',
+                history: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                challenge: 'If 3 red apples existed, how many apples started out green.',
+              });
+            }}
+            style={styles.rect}><BebasText style={styles.text2}>Null</BebasText>
           </AwesomeButton>
           <BebasText style={styles.text4}>Substitution Ciphers - Monoalphabetic</BebasText>
           <AwesomeButton
