@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, Button } from "react-native";
 import AwesomeButton from 'react-native-really-awesome-button';
-import { BebasText } from '../components/BebasText';
+import { PlayfairTextBold } from '../components/PlayfairTextBold';
+import { PlayfairText } from '../components/PlayfairText';
 
-// HomeScreen.js
-// Renders logo and begin button
+{/* HomeScreen.js
+    Renders logo and begin button */}
 export default class HomeScreen extends Component {
 
-  // Defines a null header
   static navigationOptions = {
     header: null,
   };
@@ -15,21 +15,22 @@ export default class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <BebasText style={styles.text}>Kruptos</BebasText>
+      <PlayfairTextBold style={styles.text}>Kruptos</PlayfairTextBold>
       <AwesomeButton
         type="primary"
         backgroundColor="#e5e5e5"
         backgroundDarker="#C0C0C0"
         textColor="#00000"
+        width={200}
         onPress={() => {
           this.props.navigation.push('Levels');
-        }}><BebasText style={styles.text2}>Begin</BebasText></AwesomeButton>
+        }}><PlayfairText style={styles.text2}>Begin</PlayfairText></AwesomeButton>
       </View>
     );
   }
 }
 
-// Styles for HomeScreen.js
+{/* Styles for HomeScreen.js */}
 const styles = StyleSheet.create({
   container: {
     shadowColor: 'transparent',
@@ -40,10 +41,10 @@ const styles = StyleSheet.create({
   },
   text: {
     backgroundColor: "transparent",
-    fontSize: 95
+    fontSize: 70
   },
   text2: {
     backgroundColor: "transparent",
-    fontSize: 25
+    fontSize: 20
   }
 });

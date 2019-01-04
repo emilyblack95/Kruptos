@@ -38,6 +38,8 @@ export default class App extends React.Component {
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
         'bebas-neue': require('./assets/fonts/BebasNeue-Regular.ttf'),
+        'playfair-display': require('./assets/fonts/PlayfairDisplay-Regular.ttf'),
+        'playfair-display-bold': require('./assets/fonts/PlayfairDisplay-Bold.ttf'),
         'apple-chancery': require('./assets/fonts/Apple-Chancery.ttf'),
       }),
     ]);
