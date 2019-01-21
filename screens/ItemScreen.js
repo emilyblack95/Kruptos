@@ -34,16 +34,6 @@ export default class ItemScreen extends Component {
      }
   };
 
-  _goBack(screenNumber, answer) {
-    if(this.state.text === JSON.parse(answer)) {
-      this._storeData (screenNumber, "true");
-    }
-    else {
-      this._storeData (screenNumber, "false");
-    }
-    this.props.navigation.goBack();
-  };
-
   _scrollToInput (reactNode: any) {
     this.scroll.props.scrollToFocusedInput(reactNode);
   };
@@ -106,9 +96,8 @@ export default class ItemScreen extends Component {
               marginTop: 5,
               borderColor: '#C0C0C0',
               borderWidth: 2,
-              placeholder: this._retrieveData(JSON.stringify(screenNumber)) === "true" ? JSON.stringify(answer) : "",
-              backgroundColor: this.state.text === JSON.parse(JSON.stringify(answer)) ? '#b3e5d1' : '#e5b3bf',
-              placeholder: this.state.text === JSON.parse(JSON.stringify(answer)) ? JSON.parse(JSON.stringify(answer)) : ''}}
+              placeholder: this._retrieveData(JSON.stringify(screenNumber)) === "true" ? JSON.stringify(answer) : '',
+              backgroundColor: this.state.text === JSON.parse(JSON.stringify(answer)) ? '#b3e5d1' : '#e5b3bf'}}
           />
           <AwesomeButton
             type="primary"
@@ -116,7 +105,7 @@ export default class ItemScreen extends Component {
             backgroundDarker="#C0C0C0"
             textColor="#00000"
             width={250}
-            onPress={() => this._goBack(JSON.stringify(screenNumber), JSON.stringify(answer))}
+            onPress={() => { this._retrieveData(JSON.stringify(screenNumber)) != -1 ? this.state.text === JSON.parse(JSON.stringify(answer)) ? this._storeData(JSON.stringify(screenNumber), "true") : '' : this._storeData(JSON.stringify(screenNumber), "false"); this.props.navigation.goBack(); } }
             style={styles.rect2}><PlayfairText style={styles.text2}>Back</PlayfairText>
           </AwesomeButton>
         </View>
