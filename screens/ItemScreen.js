@@ -6,37 +6,41 @@ import AwesomeButton from 'react-native-really-awesome-button';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 {/* ItemScreen.js
-    Renders specific cipher info, history and challenge */}
+    Renders specific cipher info, history and challenge
+    For each screen number, we store the last thing input. */}
 export default class ItemScreen extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { text: '' };
+    state = { text: '' };
+    this._storeData = this._storeData.bind(this);
+    this._retrieveData = this._retrieveData.bind(this);
   };
 
   static navigationOptions = {
     header: null,
   };
 
-  _storeData = async (screenNumber, finished) => {
+  async _storeData(screenNumber, textInput) {
     try {
-      await AsyncStorage.setItem(screenNumber, finished);
+      await AsyncStorage.setItem(screenNumber, textInput);
     } catch (error) {
       return -1;
     }
   };
 
-  _retrieveData = async (screenNumber) => {
+  async _retrieveData(screenNumber) {
     try {
       const value = await AsyncStorage.getItem(screenNumber);
+      return value;
      } catch (error) {
        return -1;
      }
   };
 
-  _scrollToInput (reactNode: any) {
+  _scrollToInput(reactNode: any) {
     this.scroll.props.scrollToFocusedInput(reactNode);
-  };
+  }
 
   render() {
     const { navigation } = this.props;
@@ -79,7 +83,7 @@ export default class ItemScreen extends Component {
           <PlayfairText style={styles.text2}>Answer:</PlayfairText>
           <TextInput
           	maxLength={JSON.stringify(answer).length}
-          	onChangeText={(text) => this.setState({ text })}
+          	onChangeText={(text) => this.setState({text})}
           	value={this.state.text}
           	style={{
               flex: 1,
@@ -96,8 +100,8 @@ export default class ItemScreen extends Component {
               marginTop: 5,
               borderColor: '#C0C0C0',
               borderWidth: 2,
-              placeholder: this._retrieveData(JSON.stringify(screenNumber)) === "true" ? JSON.stringify(answer) : '',
-              backgroundColor: this.state.text === JSON.parse(JSON.stringify(answer)) ? '#b3e5d1' : '#e5b3bf'}}
+              placeholder: this._retrieveData(JSON.stringify(screenNumber)) !== -1 ? this._retrieveData(JSON.stringify(screenNumber)) : '',
+              backgroundColor: this.state.text !== null ? this.state.text.toLowerCase() === JSON.parse(JSON.stringify(answer)) ? '#b3e5d1' : '#e5b3bf' : '#e5b3bf' }}
           />
           <AwesomeButton
             type="primary"
@@ -105,7 +109,7 @@ export default class ItemScreen extends Component {
             backgroundDarker="#C0C0C0"
             textColor="#00000"
             width={250}
-            onPress={() => { this._retrieveData(JSON.stringify(screenNumber)) != -1 ? this.state.text === JSON.parse(JSON.stringify(answer)) ? this._storeData(JSON.stringify(screenNumber), "true") : '' : this._storeData(JSON.stringify(screenNumber), "false"); this.props.navigation.goBack(); } }
+            onPress={() => { this._storeData(JSON.stringify(screenNumber), this.state.text.toLowerCase()); this.props.navigation.goBack(); } }
             style={styles.rect2}><PlayfairText style={styles.text2}>Back</PlayfairText>
           </AwesomeButton>
         </View>
